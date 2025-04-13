@@ -8,21 +8,22 @@ graph TD
     A[Directorio Raíz] --> B[css]
     B --> B1[calculadora.css]
     B --> B2[curriculo.css]
-    
+
     A --> C[html]
     C --> C1[calculadora.html]
-    C --> C2[Curriculo.html]
-    
+    C --> C2[curriculo.html]
+
     A --> D[img]
     D --> D1[ing.Jinho.png]
-    
+
     A --> E[js]
-    E --> E1[Js calculadora.js]
-    E --> E2[Js curriculo.js]
-    
+    E --> E1[calculadora.js]
+    E --> E2[curriculo.js]
+
     A --> F[LICENSE]
     A --> G[README.md]
 ```
+
 
 
 ## Descripción General
