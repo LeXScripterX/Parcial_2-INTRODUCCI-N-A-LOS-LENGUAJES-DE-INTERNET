@@ -2,7 +2,6 @@
 
 ---
 
-
 ```mermaid
 graph TD
     A[Directorio Raíz] --> B[css]

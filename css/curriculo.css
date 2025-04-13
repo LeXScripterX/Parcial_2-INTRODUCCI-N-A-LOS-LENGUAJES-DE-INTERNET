@@ -16,6 +16,13 @@
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
+
+:root {
+    --dark-mode-width: 200px;
+    --dark-mode-height: 100px;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +36,18 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 }
+
+body.active {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --text-color: #f5f5f5;
+    --bg-color: #2c3e50;
+    --card-bg: #34495e;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+  
+
+
 
 .container {
     max-width: 800px;
@@ -95,24 +114,79 @@ li {
     font-size: 1.1rem;
 }
 
-.btn-thema {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 8px var(--shadow-color);
+/* Contenedor para centrar el interruptor */
+.dark-mode-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
 }
 
-.theme-button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
+/* Ajustes específicos para el interruptor */
+.dark-mode {
+    text-align: center;
+    border: 2px solid black;
+    width: var(--dark-mode-width);
+    height: var(--dark-mode-height);
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background-color: #DFDEDE;
+    transition: background-color 0.5s ease;
+    margin: 0 auto; /* Centrado adicional */
 }
+
+.dark-mode .circle {
+    border: none;
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    transform: translateX(10%);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.dark-mode .circle ion-icon {
+    border: none;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+body.active .dark-mode {
+    background-color: white;
+}
+
+body.active .circle {
+    transform: translateX(140%);
+    background-color: #2A2A2C;
+}
+
+.dark-mode .circle .moon {
+    transform: translateY(-120%);
+    color: #ffffff;
+}
+
+body.active .circle .moon{
+    color: white;
+    transform: translateX(0);
+}
+
+.dark-mode .circle .sun {
+    color: #FCDE5B
+}
+
+body.active .circle .sun{
+    transform: translateY(120%);
+}
+
 
 .footer {
     text-align: center;
